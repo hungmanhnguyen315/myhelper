@@ -7,12 +7,22 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 
+/**
+*
+*
+* @author Hung M. Nguyen
+* @since 04/09/2017
+*/
 public class Formatter {
     private static Map<String, DateFormat> dateFormat;
 
     /**
+    * Get (create if not exist) an object implemented DateFormat interface
+    * with you pattern
+    *
     * @author Hung M. Nguyen
     * @since 04/09/2017
+    * @return An object implemented DateFormat interface with your pattern
     */
     private static DateFormat getDateFormat(String pattern) {
         if (dateFormat == null)
@@ -28,6 +38,8 @@ public class Formatter {
     }
 
     /**
+    * Convert date to string by your pattern
+    *
     * @author Hung M. Nguyen
     * @since 04/09/2017
     * @param value
@@ -38,6 +50,8 @@ public class Formatter {
     }
 
     /**
+    * Convert string to date by your pattern
+    *
     * @author Hung M. Nguyen
     * @since 04/09/2017
     * @param value
