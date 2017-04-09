@@ -1,0 +1,10 @@
+echo Building project...
+JAVA_HOME=/usr/java/jdk1.8.0_112
+BUILD_DIR=bin
+BUILD_OPTS="-Xlint:all -encoding utf8 -sourcepath src"
+CLASSPATH=${CATALINA_HOME}/lib/servlet-api.jar
+SRCDIR=src/org/myhelper
+rm -rf ${BUILD_DIR}
+mkdir -p ${BUILD_DIR}
+${JAVA_HOME}/bin/javac -d ${BUILD_DIR} ${BUILD_OPTS} ${SRCDIR}/common/*.java -classpath ${CLASSPATH}
+
